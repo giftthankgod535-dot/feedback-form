@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Responsive Feedback Form</title>
+      <link rel="stylesheet" href="Styles.css">
+    </head>
+<body>
+  <main class="page">
+    <section class="card" aria-labelledby="feedback-heading">
+      <h1 id="feedback-heading">We value your feedback</h1>
+      <p class="lead">Tell us what you think — it only takes a minute.</p>
+
+      <form id="feedback-form" novalidate>
+       
+        <fieldset class="rating" aria-label="Rating">
+          <legend>Rating</legend>
+          <div class="stars" role="radiogroup" aria-labelledby="rating-legend">
+            
+            <button type="button" class="star" data-value="1" aria-checked="false" role="radio" aria-label="1 star">★</button>
+            <button type="button" class="star" data-value="2" aria-checked="false" role="radio" aria-label="2 stars">★</button>
+            <button type="button" class="star" data-value="3" aria-checked="false" role="radio" aria-label="3 stars">★</button>
+            <button type="button" class="star" data-value="4" aria-checked="false" role="radio" aria-label="4 stars">★</button>
+            <button type="button" class="star" data-value="5" aria-checked="false" role="radio" aria-label="5 stars">★</button>
+          </div>
+          <div class="rating-help" id="rating-help">Select a rating (optional)</div>
+        </fieldset>
+
+                <label class="field">
+          <span class="label-text">Name</span>
+          <input id="name" name="name" type="text" placeholder="Your name (optional)" maxlength="60" />
+        </label>
+
+                <label class="field">
+          <span class="label-text">Email</span>
+          <input id="email" name="email" type="email" placeholder="you@example.com (optional)" maxlength="254" />
+        </label>
+
+                <label class="field">
+          <span class="label-text required">Message</span>
+          <textarea id="message" name="message" rows="6" required minlength="10" maxlength="1000"
+            placeholder="Tell us about your experience..."></textarea>
+          <div class="meta">
+            <div id="char-count" aria-live="polite">0 / 1000</div>
+            <div class="hint">Minimum 10 characters</div>
+          </div>
+        </label>
+
+        <div class="actions">
+          <button id="submit-btn" type="submit" class="btn primary">Send feedback</button>
+          <button id="reset-btn" type="button" class="btn ghost">Reset</button>
+        </div>
+
+        <div id="form-status" class="status" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="Script.js"></script>
+</body>
+</html>
